@@ -1,4 +1,5 @@
 from functions.get_files_info import get_files_info
+from functions.get_file_content import get_file_content
 import os
 
 def main():
@@ -27,11 +28,15 @@ def main():
     #print("======")
     
     #print("======")
-    get_files_info("calculator", ".")
-    get_files_info("calculator", "pkg")
-    get_files_info("calculator", "/bin")
-    get_files_info("calculator", "../")
-    #get_files_info("calculator", ".sd./")
+    #get_files_info("calculator", ".")
+    #get_files_info("calculator", "pkg")
+    #get_files_info("calculator", "/bin")
+    #get_files_info("calculator", "../")
+    
+    #get_file_content("calculator", "lorem.txt")
+    get_file_content("calculator", "main.py")
+    get_file_content("calculator", "pkg/calculator.py")
+    get_file_content("calculator", "/bin/cat") #(this should return an error string)
 
 
 if __name__ == "__main__":
