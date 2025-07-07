@@ -15,6 +15,7 @@ def run_python_file(working_directory, file_path):
     print(path)
     #print(not file_path in "../")
     #print(os.path.abspath(path))
+
     if (os.path.isfile(path) == True and working_directory in path) and not "../" in file_path:
         try:
             result = subprocess.run([sys.executable, file_path], capture_output=True, text=True, cwd=working_directory, timeout=30)
