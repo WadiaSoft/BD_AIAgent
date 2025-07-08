@@ -29,7 +29,34 @@ schema_get_files_info = {
         "required": [],  # add "directory" here if it must be provided
     },
 }
-
+schema_get_file_content = {
+    "name": "get_file_content",
+    "description": "List files and directories",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "directory": {
+                "type": "string",
+                "description": "List files and directories",
+            },
+        },
+        "required": [],  # add "directory" here if it must be provided
+    },
+}
+schema_run_python_file = {
+    "name": "run_python_file",
+    "description": "Execute Python files with optional arguments",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "directory": {
+                "type": "string",
+                "description": "Execute Python files with optional arguments",
+            },
+        },
+        "required": [],  # add "directory" here if it must be provided
+    },
+}
 
 
 def get_files_info(working_directory, directory=None):

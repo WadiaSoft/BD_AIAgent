@@ -1,6 +1,26 @@
 import os
 from pathlib import Path
 
+
+schema_write_file = {
+    "name": "write_file",
+    "description": "Write or overwrite files",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "file_path": {
+                "type": "string",
+                "description": "The relative path of the file to write to.",
+            },
+            "content": {
+                "type": "string",
+                "description": "The content to write into the file.",
+            },
+        },
+        "required": ["file_path", "content"],
+    },
+}
+
 def write_file(working_directory, file_path, content):
     path = os.path.join(working_directory,file_path)
     #print(file_path)
